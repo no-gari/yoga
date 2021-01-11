@@ -13,20 +13,24 @@ class HomeScreen extends StatelessWidget {
       drawer: Drawer(),
       appBar: HamburgerAppbarComponent(),
       body: Container(
-        padding: const EdgeInsets.only(top: 30, left: 20),
+        padding: const EdgeInsets.only(left: 20),
         child: ListView(
           children: [
-            RichText(
-              text: TextSpan(
-                style: Theme.of(context).textTheme.headline2,
-                children: [
-                  TextSpan(
-                      text: '오직 당신만을 위한,\n',
-                      style: Theme.of(context).textTheme.headline3),
-                  TextSpan(
-                      text: '테마별 요가 ', style: TextStyle(color: kPrimaryColor)),
-                  TextSpan(text: '추천'),
-                ],
+            Container(
+              margin: const EdgeInsets.only(top: 30),
+              child: RichText(
+                text: TextSpan(
+                  style: Theme.of(context).textTheme.headline2,
+                  children: [
+                    TextSpan(
+                        text: '오직 당신만을 위한,\n',
+                        style: Theme.of(context).textTheme.headline3),
+                    TextSpan(
+                        text: '테마별 요가 ',
+                        style: TextStyle(color: kPrimaryColor)),
+                    TextSpan(text: '추천'),
+                  ],
+                ),
               ),
             ),
             Container(
@@ -72,7 +76,12 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            InstructorYogaComponent()
+            Container(
+              height: 200,
+              child: ListView(scrollDirection: Axis.horizontal, children: [
+                InstructorYogaComponent(),
+              ]),
+            ),
           ],
         ),
       ),

@@ -25,7 +25,11 @@ class MyApp extends StatelessWidget {
           headline4: TextStyle(
               fontSize: 15, color: Colors.black, fontWeight: FontWeight.normal),
           headline5: TextStyle(
-              fontSize: 20, color: Colors.black, fontWeight: FontWeight.normal),
+              fontSize: 10, color: Colors.black, fontWeight: FontWeight.normal),
+          headline6: TextStyle(
+              fontSize: 8,
+              color: Colors.grey[700],
+              fontWeight: FontWeight.normal),
         ),
         primarySwatch: Colors.blue,
         appBarTheme: AppBarTheme(
