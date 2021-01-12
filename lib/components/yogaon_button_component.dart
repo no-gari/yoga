@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:yogaon/constants.dart';
 
 class YogaonButtonComponent extends StatelessWidget {
-  YogaonButtonComponent(
-      {this.buttonText = '임의의 글',
-      this.buttonHeight = 45,
-      this.buttonWidth = double.infinity});
+  YogaonButtonComponent({
+    this.buttonText = '임의의 글',
+    this.buttonHeight = 45,
+    this.buttonWidth = double.infinity,
+  });
 
   final String buttonText;
   final double buttonHeight;

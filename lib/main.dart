@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yogaon/constants.dart';
 import 'package:yogaon/screens/introduction/start_screen.dart';
+import 'package:yogaon/screens/user/login_screen.dart';
 import 'package:yogaon/screens/yogaon/home_screen.dart';
 
 void main() {
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         iconTheme: IconThemeData(color: Colors.black),
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
