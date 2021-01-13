@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:yogaon/components/yogaon_button_component.dart';
-import 'package:yogaon/screens/options/age_choice_screen.dart';
+import 'package:yogaon/screens/options/reason_choice_screen.dart';
 import 'package:yogaon/screens/options/recommendation_screen.dart';
 import 'package:yogaon/screens/yogaon/home_screen.dart';
 
-class SexChoiceScreen extends StatelessWidget {
+class YogaLevelChoiceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class SexChoiceScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '성별을 선택해주세요.',
+              '당신의 요가 실력은?',
               style: Theme.of(context).textTheme.headline2,
             ),
             GestureDetector(
@@ -21,7 +21,7 @@ class SexChoiceScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return AgeChoiceScreen();
+                    return ReasonChoiceScreen();
                   }),
                 );
               },
@@ -31,14 +31,20 @@ class SexChoiceScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     YogaonButtonComponent(
-                      buttonText: '남자',
+                      buttonText: '초급',
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     YogaonButtonComponent(
-                      buttonText: '여자',
-                    )
+                      buttonText: '중급',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    YogaonButtonComponent(
+                      buttonText: '고급',
+                    ),
                   ],
                 ),
               ),

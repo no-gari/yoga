@@ -97,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             Text(
                               '회원가입',
-                              style: TextStyle(color: kBackgroundColorMain),
+                              style: TextStyle(color: kPrimaryColor),
                             ),
                           ],
                         ),

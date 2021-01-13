@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         iconTheme: IconThemeData(color: Colors.black),
       ),
-      home: LoginScreen(),
+      home: StartScreen(),
     );
   }
 }

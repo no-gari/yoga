@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:yogaon/components/yogaon_button_component.dart';
-import 'package:yogaon/screens/options/age_choice_screen.dart';
 import 'package:yogaon/screens/options/recommendation_screen.dart';
 import 'package:yogaon/screens/yogaon/home_screen.dart';
 
-class SexChoiceScreen extends StatelessWidget {
+class BodypartChoiceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,16 +11,20 @@ class SexChoiceScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              '성별을 선택해주세요.',
-              style: Theme.of(context).textTheme.headline2,
+            RichText(
+              text: TextSpan(
+                  style: Theme.of(context).textTheme.headline2,
+                  children: [
+                    TextSpan(text: '특별히 신경 쓰는\n'),
+                    TextSpan(text: '신체부위가 있으신가요?'),
+                  ]),
             ),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return AgeChoiceScreen();
+                    return RecommendationScreen();
                   }),
                 );
               },
@@ -31,13 +34,25 @@ class SexChoiceScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     YogaonButtonComponent(
-                      buttonText: '남자',
+                      buttonText: '어깨와 팔',
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     YogaonButtonComponent(
-                      buttonText: '여자',
+                      buttonText: '허리와 엉덩이',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    YogaonButtonComponent(
+                      buttonText: '다리',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    YogaonButtonComponent(
+                      buttonText: '없',
                     )
                   ],
                 ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:yogaon/components/yogaon_button_component.dart';
-import 'package:yogaon/screens/options/age_choice_screen.dart';
 import 'package:yogaon/screens/options/recommendation_screen.dart';
+import 'package:yogaon/screens/options/yoga_level_choice_screen.dart';
 import 'package:yogaon/screens/yogaon/home_screen.dart';
 
-class SexChoiceScreen extends StatelessWidget {
+class AgeChoiceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class SexChoiceScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '성별을 선택해주세요.',
+              '해당 연령대를 선택해주세요.',
               style: Theme.of(context).textTheme.headline2,
             ),
             GestureDetector(
@@ -21,7 +21,7 @@ class SexChoiceScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return AgeChoiceScreen();
+                    return YogaLevelChoiceScreen();
                   }),
                 );
               },
@@ -31,13 +31,25 @@ class SexChoiceScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     YogaonButtonComponent(
-                      buttonText: '남자',
+                      buttonText: '24세 이하',
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     YogaonButtonComponent(
-                      buttonText: '여자',
+                      buttonText: '25세 이상 29세 이하',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    YogaonButtonComponent(
+                      buttonText: '30세 이상 34세 이하',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    YogaonButtonComponent(
+                      buttonText: '35세 이상',
                     )
                   ],
                 ),
