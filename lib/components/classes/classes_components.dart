@@ -3,13 +3,14 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class ClassesComponent extends StatelessWidget {
   ClassesComponent({
+    Key key,
     this.instructorName = '김수경',
     this.subTitle = '[코어+근력 강화]',
     this.title = "'12회' 수업으로 복근 만들기",
     this.rate_avg = 3.5,
     this.people_cnt = 190,
     this.card_width,
-  });
+  }) : super(key: key);
 
   final String instructorName;
   final String subTitle;

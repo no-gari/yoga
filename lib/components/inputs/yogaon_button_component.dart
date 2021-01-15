@@ -6,7 +6,7 @@ class YogaonButtonComponent extends StatelessWidget {
     this.buttonText = '임의의 글',
     this.buttonHeight = 45,
     this.buttonWidth = double.infinity,
-    this.buttonColor = const Color(0xFFC1E6D4),
+    this.buttonColor = const Color(0xFF9ADABE),
     this.buttonTextColor = Colors.white,
   });
 
@@ -25,6 +25,14 @@ class YogaonButtonComponent extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: buttonColor,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 2,
+            blurRadius: 2,
+            offset: Offset(1, 1), // changes position of shadow
+          ),
+        ],
       ),
       child: Text(
         '$buttonText',

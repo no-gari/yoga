@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:yogaon/components/hamburger_appbar_component.dart';
-import 'package:yogaon/components/instructor_yoga_component.dart';
-import 'package:yogaon/components/themeyoga_componet.dart';
-import 'package:yogaon/components/yogatype_component.dart';
+import 'package:yogaon/components/classes/instructor_yoga_component.dart';
+import 'package:yogaon/components/classes/themeyoga_componet.dart';
+import 'package:yogaon/components/classes/yogatype_component.dart';
 import 'package:yogaon/constants.dart';
 
 class HomeScreen extends StatelessWidget {

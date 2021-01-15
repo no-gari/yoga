@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yogaon/components/yogaon_button_component.dart';
+import 'package:yogaon/components/inputs/yogaon_button_component.dart';
 import 'package:yogaon/constants.dart';
 import 'package:yogaon/screens/options/sex_choice_screen.dart';
 import 'package:yogaon/screens/user/login_screen.dart';

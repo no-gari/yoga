@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yogaon/components/classes_components.dart';
-import 'package:yogaon/components/yogaon_button_component.dart';
+import 'package:yogaon/components/classes/classes_components.dart';
+import 'package:yogaon/components/inputs/yogaon_button_component.dart';
 import 'package:yogaon/constants.dart';
 
 class RecommendationScreen extends StatelessWidget {

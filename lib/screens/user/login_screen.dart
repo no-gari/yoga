@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:yogaon/components/login_button_component.dart';
+import 'package:yogaon/components/inputs/login_button_component.dart';
 import 'package:yogaon/constants.dart';
+import 'package:yogaon/screens/user/email/email_login_screen.dart';
+import 'package:yogaon/screens/user/email/signup_email_verifciation_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -60,44 +62,77 @@ class LoginScreen extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            LoginButtonComponent(
-                              buttonText: '카카오톡으로 로그인',
-                              buttonColor: Color(0xFFfef01b),
-                              faIcon: FaIcon(FontAwesomeIcons.solidComment),
-                            ),
-                            LoginButtonComponent(
-                              buttonText: '페이스북으로 로그인',
-                              faIcon: FaIcon(
-                                FontAwesomeIcons.facebook,
-                                color: Colors.white,
+                            GestureDetector(
+                              onTap: null,
+                              child: LoginButtonComponent(
+                                buttonText: '카카오톡으로 로그인',
+                                buttonColor: Color(0xFFfef01b),
+                                faIcon: FaIcon(FontAwesomeIcons.solidComment),
                               ),
-                              buttonColor: Color(0xFF3b5998),
-                              buttonTextColor: Colors.white,
                             ),
-                            LoginButtonComponent(
-                              buttonText: 'Apple로 로그인',
-                              faIcon: FaIcon(
-                                FontAwesomeIcons.apple,
-                                color: Colors.white,
+                            GestureDetector(
+                              onTap: null,
+                              child: LoginButtonComponent(
+                                buttonText: '페이스북으로 로그인',
+                                faIcon: FaIcon(
+                                  FontAwesomeIcons.facebook,
+                                  color: Colors.white,
+                                ),
+                                buttonColor: Color(0xFF3b5998),
+                                buttonTextColor: Colors.white,
                               ),
-                              buttonColor: Colors.black,
-                              buttonTextColor: Colors.white,
+                            ),
+                            GestureDetector(
+                              onTap: null,
+                              child: LoginButtonComponent(
+                                buttonText: 'Apple로 로그인',
+                                faIcon: FaIcon(
+                                  FontAwesomeIcons.apple,
+                                  color: Colors.white,
+                                ),
+                                buttonColor: Colors.black,
+                                buttonTextColor: Colors.white,
+                              ),
                             ),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              '이메일 로그인',
-                              style: TextStyle(color: kPrimaryColor),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return EmailLoginScreen();
+                                    },
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                '이메일 로그인',
+                                style: TextStyle(color: kPrimaryColor),
+                              ),
                             ),
                             SizedBox(
                               width: 10,
                             ),
-                            Text(
-                              '회원가입',
-                              style: TextStyle(color: kPrimaryColor),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return EmailVerificationScreen();
+                                    },
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                '회원가입',
+                                style: TextStyle(color: kPrimaryColor),
+                              ),
                             ),
                           ],
                         ),
