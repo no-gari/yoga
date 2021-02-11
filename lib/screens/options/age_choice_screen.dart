@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:yogaon/components/inputs/yogaon_button_component.dart';
-import 'package:yogaon/screens/options/recommendation_screen.dart';
 import 'package:yogaon/screens/options/yoga_level_choice_screen.dart';
-import 'package:yogaon/screens/yogaon/home_screen.dart';
 
 class AgeChoiceScreen extends StatelessWidget {
+  static String routeName = '/agechoice_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

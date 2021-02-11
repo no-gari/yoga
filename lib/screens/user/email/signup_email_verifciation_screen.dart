@@ -63,7 +63,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                   padding: const EdgeInsets.only(left: 40, top: 30),
                   child: Text('인증번호 확인')),
               RoundedInputfieldComponent(
-                icon: Icons.confirmation_number,
+                icon: Icons.help,
                 hintText: '인증번호 입력',
               ),
               GestureDetector(

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:yogaon/size_config.dart';
 
 class ThemeYogaComponent extends StatelessWidget {
-  ThemeYogaComponent({this.source = 'assets/images/themeyoga.jpg', this.onTap});
+  ThemeYogaComponent(
+      {Key key, this.source = 'assets/images/themeyoga.jpg', this.onTap})
+      : super(key: key);
 
   final String source;
   final Function onTap;
@@ -14,18 +17,19 @@ class ThemeYogaComponent extends StatelessWidget {
       },
       child: Container(
         margin: const EdgeInsets.only(right: 20, top: 5, bottom: 5),
-        height: 130,
-        width: 175,
+        height: getProportionateHeight(120),
+        width: getProportionalWidth(175),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(13),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 3,
-                blurRadius: 3,
-                offset: Offset(1, 1), // changes position of shadow
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 1,
+                blurRadius: 1,
+                offset: Offset(0.5, 0.5), // changes position of shadow
               ),
             ],
+            border: Border.all(color: Colors.grey.withOpacity(0.2)),
             image: DecorationImage(
               image: AssetImage('$source'),
               fit: BoxFit.cover,

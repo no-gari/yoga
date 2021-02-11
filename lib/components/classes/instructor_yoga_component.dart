@@ -5,7 +5,7 @@ class InstructorYogaComponent extends StatelessWidget {
   InstructorYogaComponent({
     this.instructorName = '김수경',
     this.outstandingClass = '빈야사 유연성 어쩌구',
-    this.otherClasses,
+    // this.otherClasses=['asdf'],
     this.rate_avg = 3.5,
     this.people_cnt = 190,
     this.card_width,
@@ -13,7 +13,7 @@ class InstructorYogaComponent extends StatelessWidget {
 
   final String instructorName;
   final String outstandingClass;
-  final List<String> otherClasses;
+  // final List<String> otherClasses;
   final double rate_avg;
   final int people_cnt;
   final double card_width;
@@ -21,6 +21,8 @@ class InstructorYogaComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 100,
+      height: 100,
       margin: const EdgeInsets.only(right: 20),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(

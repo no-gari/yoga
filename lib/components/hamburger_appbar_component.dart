@@ -5,7 +5,6 @@ class HamburgerAppbarComponent extends StatelessWidget
   @override
   Size get preferredSize => const Size.fromHeight(70);
 
-  @override
   Widget build(BuildContext context) {
     return AppBar(
       iconTheme: IconThemeData(color: Colors.black),

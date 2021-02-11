@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:yogaon/components/inputs/yogaon_button_component.dart';
 import 'package:yogaon/constants.dart';
 import 'package:yogaon/screens/options/sex_choice_screen.dart';
-import 'package:yogaon/screens/user/login_screen.dart';
 
 class StartScreen extends StatelessWidget {
+  static String routeName = '/start';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,14 +46,7 @@ class StartScreen extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return SexChoiceScreen();
-                      },
-                    ),
-                  );
+                  Navigator.pushNamed(context, SexChoiceScreen.routeName);
                 },
                 child: Padding(
                   padding:

@@ -4,13 +4,15 @@ import 'package:yogaon/components/inputs/login_button_component.dart';
 import 'package:yogaon/constants.dart';
 import 'package:yogaon/screens/user/email/email_login_screen.dart';
 import 'package:yogaon/screens/user/email/signup_email_verifciation_screen.dart';
+import 'package:yogaon/size_config.dart';
 
 class LoginScreen extends StatelessWidget {
+  static String routeName = '/login';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(top: 50),
+        padding: EdgeInsets.only(top: getProportionateHeight(50)),
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/loginbackground.png'),
@@ -22,7 +24,8 @@ class LoginScreen extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                  constraints: BoxConstraints(maxWidth: 200),
+                  constraints:
+                      BoxConstraints(maxWidth: getProportionalWidth(200)),
                   child: Image.asset('assets/images/logo.png')),
             ),
             Expanded(
@@ -32,7 +35,9 @@ class LoginScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Container(
-                      margin: const EdgeInsets.only(top: 40, left: 30),
+                      margin: EdgeInsets.only(
+                          top: getProportionateHeight(40),
+                          left: getProportionalWidth(30)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -55,9 +60,8 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 60,
-                    ),
+                    padding:
+                        EdgeInsets.only(bottom: getProportionateHeight(60)),
                     child: Column(
                       children: [
                         Column(

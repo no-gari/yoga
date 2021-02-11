@@ -8,6 +8,7 @@ class YogaonButtonComponent extends StatelessWidget {
     this.buttonWidth = double.infinity,
     this.buttonColor = const Color(0xFF9ADABE),
     this.buttonTextColor = Colors.white,
+    this.press,
   });
 
   final String buttonText;
@@ -15,29 +16,38 @@ class YogaonButtonComponent extends StatelessWidget {
   final double buttonWidth;
   final Color buttonColor;
   final Color buttonTextColor;
+  final Function press;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      width: buttonWidth,
-      height: buttonHeight,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: buttonColor,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 2,
-            offset: Offset(1, 1), // changes position of shadow
-          ),
-        ],
-      ),
-      child: Text(
-        '$buttonText',
-        style: TextStyle(
-            color: buttonTextColor, fontSize: 20, fontWeight: FontWeight.bold),
+    return GestureDetector(
+      onTap: () {
+        press;
+      },
+      child: Container(
+        alignment: Alignment.center,
+        width: buttonWidth,
+        height: buttonHeight,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: buttonColor,
+          border: Border.all(color: kBackgroundColorMain),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              spreadRadius: 1,
+              blurRadius: 1,
+              offset: Offset(1, 1), // changes position of shadow
+            ),
+          ],
+        ),
+        child: Text(
+          '$buttonText',
+          style: TextStyle(
+              color: buttonTextColor,
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

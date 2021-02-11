@@ -1,90 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:yogaon/components/custom_bottom_navbar.dart';
 import 'package:yogaon/components/hamburger_appbar_component.dart';
-import 'package:yogaon/components/classes/instructor_yoga_component.dart';
-import 'package:yogaon/components/classes/themeyoga_componet.dart';
-import 'package:yogaon/components/classes/yogatype_component.dart';
-import 'package:yogaon/constants.dart';
+import 'package:yogaon/routes.dart';
+import '../../enums.dart';
+import '../../size_config.dart';
+import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
+  static String routeName = '/home';
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
-      drawer: Drawer(),
-      appBar: HamburgerAppbarComponent(),
-      body: Container(
-        padding: const EdgeInsets.only(left: 20),
-        child: ListView(
-          children: [
-            Container(
-              margin: const EdgeInsets.only(top: 30),
-              child: RichText(
-                text: TextSpan(
-                  style: Theme.of(context).textTheme.headline2,
-                  children: [
-                    TextSpan(
-                        text: '오직 당신만을 위한,\n',
-                        style: Theme.of(context).textTheme.headline3),
-                    TextSpan(
-                        text: '테마별 요가 ',
-                        style: TextStyle(color: kPrimaryColor)),
-                    TextSpan(text: '추천'),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 20, bottom: 30),
-              height: 140,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  ThemeYogaComponent(),
-                  ThemeYogaComponent(),
-                  ThemeYogaComponent(),
-                ],
-              ),
-            ),
-            Text(
-              '종류별 요가',
-              style: Theme.of(context)
-                  .textTheme
-                  .headline2
-                  .copyWith(color: kPrimaryColor),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 20, bottom: 30),
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  YogaTypeCardWidget(),
-                  YogaTypeCardWidget(),
-                  YogaTypeCardWidget(),
-                ],
-              ),
-            ),
-            RichText(
-              text: TextSpan(
-                style: Theme.of(context).textTheme.headline2,
-                children: [
-                  TextSpan(
-                    text: '다른 수업 ',
-                    style: TextStyle(color: kPrimaryColor),
-                  ),
-                  TextSpan(text: '둘러보기'),
-                ],
-              ),
-            ),
-            Container(
-              height: 200,
-              child: ListView(scrollDirection: Axis.horizontal, children: [
-                InstructorYogaComponent(),
-              ]),
-            ),
-          ],
-        ),
+      appBar: MainAppBar(),
+      body: Body(),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+    );
+  }
+}
+
+class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
+  @override
+  Size get preferredSize => const Size.fromHeight(55);
+
+  Widget build(BuildContext context) {
+    return AppBar(
+      iconTheme: IconThemeData(color: Colors.black),
+      leading: Container(),
+      title: Image.asset(
+        'assets/images/logo.png',
+        width: getProportionalWidth(130),
       ),
+      elevation: 1,
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 15),
+          child: Icon(
+            Icons.notifications_outlined,
+            color: Colors.grey,
+          ),
+        ),
+      ],
     );
   }
 }

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:yogaon/components/inputs/yogaon_button_component.dart';
 import 'package:yogaon/screens/options/frequency_choice_screen.dart';
-import 'package:yogaon/screens/options/recommendation_screen.dart';
-import 'package:yogaon/screens/yogaon/home_screen.dart';
+// import 'package:yogaon/screens/options/recommendation_screen.dart';
+// import 'package:yogaon/screens/yogaon/home_screen.dart';
 
 class ReasonChoiceScreen extends StatelessWidget {
+  static String routeName = '/reason_choice_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

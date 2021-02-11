@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "690664851319",
+    "project_id": "yogaon-7648d",
+    "storage_bucket": "yogaon-7648d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690664851319:android:93b867b38abacb57048372",
+        "android_client_info": {
+          "package_name": "com.yogaon.yogaon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690664851319-ne43rj2lfjkm5gj0rjqtf59oijlt8lea.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQLKnVgK5U0tV-x8iEVPatZYkHVS97ieo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690664851319-ne43rj2lfjkm5gj0rjqtf59oijlt8lea.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "690664851319-prrt9kb0vng5hd77fjcjm7qe8ghrk6fr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yogaon.yogaon"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:yogaon/size_config.dart';
 
 class ClassesComponent extends StatelessWidget {
   ClassesComponent({
@@ -22,9 +23,8 @@ class ClassesComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 15),
-      width: 230,
-      padding: const EdgeInsets.all(20),
+      width: getProportionalWidth(230),
+      padding: EdgeInsets.all(getProportionalWidth(20)),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(13),
@@ -45,8 +45,8 @@ class ClassesComponent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: 220,
-                height: 150,
+                width: getProportionalWidth(220),
+                height: getProportionateHeight(150),
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/images/themeyoga.jpg'),
@@ -55,7 +55,7 @@ class ClassesComponent extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: getProportionateHeight(10),
               ),
               RichText(
                 text: TextSpan(
@@ -69,7 +69,8 @@ class ClassesComponent extends StatelessWidget {
                     ]),
               ),
               Container(
-                  padding: const EdgeInsets.only(top: 5),
+                  padding:
+                      EdgeInsets.fromLTRB(0, getProportionateHeight(5), 0, 0),
                   child: Divider(
                     color: Colors.grey[600],
                   )),
@@ -79,14 +80,14 @@ class ClassesComponent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                width: 10,
+                width: getProportionalWidth(10),
               ),
               CircleAvatar(
-                radius: 25,
+                radius: getProportionalWidth(25),
                 backgroundImage: AssetImage('assets/images/instructor.jpg'),
               ),
               SizedBox(
-                width: 15,
+                width: getProportionalWidth(15),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,15 +112,17 @@ class ClassesComponent extends StatelessWidget {
                           color: Colors.amber,
                         ),
                         itemCount: 5,
-                        itemSize: 9.0,
+                        itemSize: getProportionalWidth(9),
                         direction: Axis.horizontal,
                       ),
                       SizedBox(
-                        width: 5,
+                        width: getProportionalWidth(5),
                       ),
                       RichText(
                         text: TextSpan(
-                          style: TextStyle(fontSize: 10, color: Colors.black),
+                          style: TextStyle(
+                              fontSize: getProportionalWidth(10),
+                              color: Colors.black),
                           children: [
                             TextSpan(text: '$rate_avg'),
                             TextSpan(text: '($people_cnt)'),
