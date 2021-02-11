@@ -16,6 +16,7 @@ class RecommendationButton extends StatelessWidget {
           buttonText: '건너뛰고 시작하기',
           buttonTextColor: Colors.grey[400],
           buttonColor: Colors.white,
+          buttonRouteName: HomeScreen.routeName,
         ),
       ),
     );

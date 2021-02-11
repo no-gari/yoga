@@ -4,7 +4,7 @@ import 'package:yogaon/constants.dart';
 import 'package:yogaon/screens/options/sex_choice_screen.dart';
 
 class StartScreen extends StatelessWidget {
-  static String routeName = '/start';
+  static String routeName = '/';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,18 +44,13 @@ class StartScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, SexChoiceScreen.routeName);
-                },
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
-                  child: YogaonButtonComponent(
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
+                child: YogaonButtonComponent(
                     buttonHeight: 40,
                     buttonText: '시작하러 가기',
-                  ),
-                ),
+                    buttonRouteName: SexChoiceScreen.routeName),
               ),
             ],
           ),

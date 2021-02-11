@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yogaon/routes.dart';
-import 'package:yogaon/screens/chats/chat_screen.dart';
-import 'package:yogaon/screens/home/home_screen.dart';
 import 'package:yogaon/screens/introduction/start_screen.dart';
-import 'package:yogaon/screens/user/login_screen.dart';
 import 'package:yogaon/theme.dart';
 
 void main() {

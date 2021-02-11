@@ -56,13 +56,6 @@ class _PasswordChangeFormState extends State<PasswordChangeForm> {
             SizedBox(height: getProportionateHeight(40)),
             YogaonButtonComponent(
               buttonText: "변경 완료",
-              press: () {
-                if (_formKey.currentState.validate()) {
-                  _formKey.currentState.save();
-                  // if all are valid then go to success screen
-                  Navigator.pushNamed(context, HomeScreen.routeName);
-                }
-              },
             ),
           ],
         ),

@@ -9,6 +9,7 @@ import 'package:yogaon/screens/options/age_choice_screen.dart';
 import 'package:yogaon/screens/options/bodypart_choice_screen.dart';
 import 'package:yogaon/screens/options/frequency_choice_screen.dart';
 import 'package:yogaon/screens/options/reason_choice_screen.dart';
+import 'package:yogaon/screens/options/sex_choice_screen.dart';
 import 'package:yogaon/screens/options/yoga_level_choice_screen.dart';
 import 'package:yogaon/screens/preference_detail/faq/faq.dart';
 import 'package:yogaon/screens/preference_detail/help_center/help_center.dart';
@@ -17,9 +18,11 @@ import 'package:yogaon/screens/preference_detail/password_change/password_change
 import 'package:yogaon/screens/preference_detail/private_infos/private_infos.dart';
 import 'package:yogaon/screens/preference_detail/profile/profile_settings.dart';
 import 'package:yogaon/screens/profile/profile_screen.dart';
+import 'package:yogaon/screens/recommendation/recommendation.dart';
 import 'package:yogaon/screens/user/login_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
+  StartScreen.routeName: (context) => StartScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
   MyclassScreen.routeName: (context) => MyclassScreen(),
   ChatScreen.routeName: (context) => ChatScreen(),
@@ -32,11 +35,12 @@ final Map<String, WidgetBuilder> routes = {
   NotificationSettings.routeName: (context) => NotificationSettings(),
   PasswordChange.routeName: (context) => PasswordChange(),
   PrivateInfo.routeName: (context) => PrivateInfo(),
-  StartScreen.routeName: (context) => StartScreen(),
   LoginScreen.routeName: (context) => LoginScreen(),
+  SexChoiceScreen.routeName: (context) => SexChoiceScreen(),
   AgeChoiceScreen.routeName: (context) => AgeChoiceScreen(),
   BodypartChoiceScreen.routeName: (context) => BodypartChoiceScreen(),
   FrequencyChoiceScreen.routeName: (context) => FrequencyChoiceScreen(),
   ReasonChoiceScreen.routeName: (context) => ReasonChoiceScreen(),
   YogaLevelChoiceScreen.routeName: (context) => YogaLevelChoiceScreen(),
+  RecommendationScreen.routeName: (context) => RecommendationScreen(),
 };

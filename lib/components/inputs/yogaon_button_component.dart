@@ -8,7 +8,7 @@ class YogaonButtonComponent extends StatelessWidget {
     this.buttonWidth = double.infinity,
     this.buttonColor = const Color(0xFF9ADABE),
     this.buttonTextColor = Colors.white,
-    this.press,
+    this.buttonRouteName,
   });
 
   final String buttonText;
@@ -16,13 +16,13 @@ class YogaonButtonComponent extends StatelessWidget {
   final double buttonWidth;
   final Color buttonColor;
   final Color buttonTextColor;
-  final Function press;
+  final String buttonRouteName;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        press;
+        Navigator.pushNamed(context, buttonRouteName);
       },
       child: Container(
         alignment: Alignment.center,

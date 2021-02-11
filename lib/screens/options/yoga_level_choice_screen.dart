@@ -18,39 +18,32 @@ class YogaLevelChoiceScreen extends StatelessWidget {
               '당신의 요가 실력은?',
               style: Theme.of(context).textTheme.headline2,
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return ReasonChoiceScreen();
-                  }),
-                );
-              },
-              child: Container(
-                margin: const EdgeInsets.only(top: 30),
-                padding: const EdgeInsets.symmetric(horizontal: 80),
-                child: Column(
-                  children: [
-                    YogaonButtonComponent(
-                      buttonText: '초급',
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    YogaonButtonComponent(
-                      buttonText: '중급',
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    YogaonButtonComponent(
-                      buttonText: '고급',
-                    ),
-                  ],
-                ),
+            Container(
+              margin: const EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 80),
+              child: Column(
+                children: [
+                  YogaonButtonComponent(
+                    buttonText: '초급',
+                    buttonRouteName: ReasonChoiceScreen.routeName,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  YogaonButtonComponent(
+                    buttonText: '중급',
+                    buttonRouteName: ReasonChoiceScreen.routeName,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  YogaonButtonComponent(
+                    buttonText: '고급',
+                    buttonRouteName: ReasonChoiceScreen.routeName,
+                  ),
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),

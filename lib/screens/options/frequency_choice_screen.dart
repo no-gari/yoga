@@ -22,39 +22,29 @@ class FrequencyChoiceScreen extends StatelessWidget {
                     TextSpan(text: '계획이신가요?'),
                   ]),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return BodypartChoiceScreen();
-                  }),
-                );
-              },
-              child: Container(
-                margin: const EdgeInsets.only(top: 30),
-                padding: const EdgeInsets.symmetric(horizontal: 80),
-                child: Column(
-                  children: [
-                    YogaonButtonComponent(
+            Container(
+              margin: const EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 80),
+              child: Column(
+                children: [
+                  YogaonButtonComponent(
                       buttonText: '주 1-2 회',
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    YogaonButtonComponent(
+                      buttonRouteName: BodypartChoiceScreen.routeName),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  YogaonButtonComponent(
                       buttonText: '주 3-4 회',
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    YogaonButtonComponent(
+                      buttonRouteName: BodypartChoiceScreen.routeName),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  YogaonButtonComponent(
                       buttonText: '매',
-                    )
-                  ],
-                ),
+                      buttonRouteName: BodypartChoiceScreen.routeName)
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),
